@@ -4,9 +4,9 @@ FROM us-central1-docker.pkg.dev/cloud-workstations-images/predefined/code-oss:la
 # Custom SSH server config
 COPY sshd_config /etc/ssh/
 
-# Install emacs
+# Upgrade everything
 RUN sudo apt update
-RUN sudo apt install -y emacs
+RUN sudo apt dist-upgrade
 
 RUN wget https://open-vsx.org/api/vscjava/vscode-java-debug/0.40.1/file/vscjava.vscode-java-debug-0.40.1.vsix && \
 unzip vscjava.vscode-java-debug-0.40.1.vsix "extension/*" &&\
