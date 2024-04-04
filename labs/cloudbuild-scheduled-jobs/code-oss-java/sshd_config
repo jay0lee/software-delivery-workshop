@@ -1,0 +1,7 @@
+PermitEmptyPasswords yes
+PrintLastLog yes
+PrintMotd yes
+PubkeyAuthentication no
+UsePAM yes
+ForceCommand /bin/bash -il
+AllowTcpForwarding no
