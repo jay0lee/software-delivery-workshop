@@ -5,8 +5,8 @@ FROM us-central1-docker.pkg.dev/cloud-workstations-images/predefined/code-oss:la
 COPY sshd_config /etc/ssh/
 
 # Upgrade everything
-RUN apt update
-RUN DEBIAN_FRONTEND=noninteractive apt -y dist-upgrade
+RUN apt-get update
+RUN DEBIAN_FRONTEND=noninteractive apt-get -y dist-upgrade
 
 RUN wget https://open-vsx.org/api/vscjava/vscode-java-debug/0.40.1/file/vscjava.vscode-java-debug-0.40.1.vsix && \
 unzip vscjava.vscode-java-debug-0.40.1.vsix "extension/*" &&\
